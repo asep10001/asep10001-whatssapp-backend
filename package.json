@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/asep10001/asep10001-whatssapp-backend#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.11.9"
+    "mongoose": "^5.11.9",
+    "pusher": "^4.0.2"
   }
 }
