@@ -21,6 +21,12 @@ const pusher = new Pusher({
 //middlewares
 app.use(express.json());
 
+app.use((req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "*");
+    next();
+})
+
 //DB config
 const connection_url =
   "mongodb://admin:RB5P4nWziwP15k87@cluster0-shard-00-00.rzmmf.mongodb.net:27017,cluster0-shard-00-01.rzmmf.mongodb.net:27017,cluster0-shard-00-02.rzmmf.mongodb.net:27017/asep10001-whatsappdb?ssl=true&replicaSet=atlas-alm9k3-shard-0&authSource=admin&retryWrites=true&w=majority";
@@ -45,7 +51,7 @@ db.once("open", () => {
       const messageDetails = change.fullDocument;
 
       pusher.trigger("messages", "inserted", {
-        name: messageDetails.user,
+        name: messageDetails.name,
         message: messageDetails.message,
       });
     } else{
