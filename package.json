@@ -1,0 +1,24 @@
+{
+  "name": "whatssapp-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asep10001/asep10001-whatssapp-backend.git"
+  },
+  "author": "Asep Agus Heri H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asep10001/asep10001-whatssapp-backend/issues"
+  },
+  "homepage": "https://github.com/asep10001/asep10001-whatssapp-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.9"
+  }
+}
